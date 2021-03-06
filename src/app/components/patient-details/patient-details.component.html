@@ -1,0 +1,37 @@
+  <div class="col-md-6">
+	<div *ngIf="!patient">
+	Aucune donnée à afficher!
+	</div>
+    <div *ngIf="patient">
+      <h4>Mes informations</h4>
+      <div>
+        <label><strong>Nom:</strong></label> {{ patient.nom_patient }}
+      </div>
+      <div>
+        <label><strong>Prenom:</strong></label> {{ patient.prenom_patient }}
+      </div>
+	  
+      <div>
+        <label><strong>N° sécurité sociale:</strong></label>{{ patient.n_sec_sociale }}
+      </div>
+
+      <div>
+        <label><strong>Sexe:</strong></label>{{ patient.sexe }}
+      </div>
+	  
+      <div>
+        <label><strong>Date de naissance:</strong></label>{{ patient.date_naiss }}
+      </div>
+	  
+      <div>
+        <label><strong>Object consultation:</strong></label>{{ patient.obj_consult }}
+      </div>
+	  
+      <a class="badge badge-warning" routerLink="/update/">
+        Modifier
+      </a>
+    </div>
+	
+	
+
+  </div>

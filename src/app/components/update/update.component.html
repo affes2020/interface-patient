@@ -1,0 +1,105 @@
+<div class="col-md-12">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="nom_patient">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nom_patient"
+          required
+          [(ngModel)]="patient.nom_patient"
+          name="nom_patient"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="prenom_patient">Prenom</label>
+        <input
+          class="form-control"
+          id="prenom_patient"
+          required
+          [(ngModel)]="patient.prenom_patient"
+          name="prenom_patient"
+        />
+      </div>
+	  
+      <div class="form-group">
+        <label for="date_naiss">Date de Naissance</label>
+        <input
+          class="form-control"
+          id="date_naiss"
+          required
+          [(ngModel)]="patient.date_naiss"
+          name="date_naiss"
+        />
+      </div>
+	  
+	  <div class="form-group">
+        <label for="sexe">Sexe</label>
+        <input
+          class="form-control"
+          id="sexe"
+          required
+          [(ngModel)]="patient.sexe"
+          name="sexe"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="n_sec_sociale">Numéro de sécurité sociale</label>
+        <input
+          class="form-control"
+          id="n_sec_sociale"
+          required
+          [(ngModel)]="patient.n_sec_sociale"
+          name="n_sec_sociale"
+        />
+      </div>
+	  
+      <div class="form-group">
+        <label for="obj_consult">Objet consultation</label>
+        <input
+          class="form-control"
+          id="obj_consult"
+          required
+          [(ngModel)]="patient.obj_consult"
+          name="obj_consult"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="photo_id_patient">Photo patient</label>
+		<input type="file" accept="image/*" name="photo_id_patient" 
+		          required
+          [(ngModel)]="patient.photo_id_patient"
+		
+		/>
+		
+	</div>
+	
+
+      <div class="form-group">
+        <label for="piece_id_patient">Piece d'identité patient</label>
+		<input type="file" accept="image/*" name="piece_id_patient" 
+		          required
+          [(ngModel)]="patient.piece_id_patient"
+		
+		/>
+		
+	</div>
+
+    </div>
+
+<div class="list row">
+  <div class="col-md-6">
+     <div> <button (click)="updatePatient()" class="btn btn-success">Enregistrer</button></div>
+	</div>
+	
+	<div class="col-md-6">  
+	  <div><button (click)="navigateToHome()" class="btn btn-success">Annuler</button></div>
+	</div>
+</div>
+
+  </div>
+</div>
