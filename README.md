@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Docker 
+## Prérequis: avoir installer docker sur votre machine
+## Suivre toutes les étapes suivantes pour publier une nouvelle mise à jour
+## Creer l'image docker 
+docker build -t interface-patient .
+
+## Tester l'image:
+docker run -p 8080:8080 interface-patient
+### pour tester se connecter sur localhost:8080
+
+## Donner un nom à l'image:
+docker tag interface-patient ionisstm/interface-patient:latest
+
+## Se connecter à docker hub
+docker login
+
+## Publier l'image sur docker hub
+docker push ionisstm/interface-patient:latest
+
